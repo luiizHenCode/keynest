@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Keynest";
+"CFBundleName" = "Keynest";
+"NSInputMonitoringUsageDescription" = "Keynest detects key presses to play local sounds. Typed content is never read or stored.";

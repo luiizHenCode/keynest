@@ -1,0 +1,30 @@
+.build/
+.swiftpm/
+build/
+.DS_Store
+
+# Local credentials, signing material and editor settings
+unique-key*.txt
+.secrets/
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.p8
+*.key
+*.pem
+*.cer
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+*.xcuserstate
+xcuserdata/
+.vscode/
+.zed/
+
+# Release artifacts belong in GitHub Releases, not Git history
+*.dmg
+*.zip
+*.dSYM/

@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Keynest";
+"CFBundleName" = "Keynest";
+"NSInputMonitoringUsageDescription" = "O Keynest detecta quando uma tecla é pressionada para reproduzir um som local. O conteúdo digitado não é lido nem armazenado.";
