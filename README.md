@@ -1,104 +1,104 @@
 # Keynest
 
-**Find your focus. / Encontre seu foco.**
+**Encontre seu foco. / Find your focus.**
 
 ![Keynest](Resources/Keynest-preview.png)
 
-Keyboard sounds, ambient audio and a Pomodoro timer in one native macOS app.
-Built with SwiftUI, with Portuguese and English support.
+Sons de teclado, ambientes sonoros e Pomodoro em um app nativo para macOS, feito com SwiftUI e disponível em português e inglês.
 
-**[Download for macOS](https://github.com/luiizHenCode/keynest/releases/latest)** · [All releases](https://github.com/luiizHenCode/keynest/releases) · [Report an issue](https://github.com/luiizHenCode/keynest/issues)
+**[Baixar para macOS](https://github.com/luiizHenCode/keynest/releases/latest)** · [Versões](https://github.com/luiizHenCode/keynest/releases) · [Reportar um problema](https://github.com/luiizHenCode/keynest/issues)
 
-**Requirements:** Apple Silicon (M1 or later), macOS 14 Sonoma or later. The official release is Developer ID signed and notarized by Apple.
+## Requisitos
 
-## Features
+- macOS 14 Sonoma ou superior.
+- Apple Silicon: M1 ou posterior. O instalador atual não inclui uma versão para Intel.
 
-- **Keyboard sounds:** real Cherry MX Black, Brown and Blue recordings, with independent volume and sound previews.
-- **Ambient audio:** rain, ocean, forest and lo-fi tracks included for offline playback.
-- **Pomodoro:** configurable focus and break durations, finite or unlimited cycles, manual or automatic transitions, sound alerts and optional notifications.
-- **Live timer:** choose a draggable floating panel with a keep-on-top option, or a countdown in the menu bar.
-- **Menu bar controls:** keep audio and timers running with the settings window closed.
-- **Languages:** switch between Portuguese, English and the system language without restarting.
+## Recursos
 
-## Install
+- **Teclado:** gravações reais de Cherry MX Black, Brown e Blue, com prévia e controle de volume.
+- **Ambientes:** Chuva, Oceano, Floresta e Lo-fi, incluídos no app para reprodução offline.
+- **Pomodoro:** foco e intervalo configuráveis, ciclos definidos ou ilimitados, transições manuais ou automáticas, sons de aviso e notificações opcionais.
+- **Timer live:** painel flutuante arrastável, com opção de fixar no topo, ou contador na barra de menus.
+- **Controles independentes:** ative ou pause os cliques e o ambiente separadamente.
+- **Idiomas:** Sistema, Português e English, com troca sem reiniciar.
 
-1. Download the DMG from [Releases](https://github.com/luiizHenCode/keynest/releases/latest).
-2. Open it and drag **Keynest** to **Applications**.
-3. Open Keynest from Applications.
-4. To hear keyboard sounds in other apps, enable **Keynest** in **System Settings → Privacy & Security → Input Monitoring**. Quit and reopen if macOS requests it.
-
-Pomodoro notifications require a separate notification permission. Ambient audio and the keyboard test field work without Input Monitoring permission.
-
-The release includes a `.sha256` file. With both files in the same folder, verify the download using:
-
-```sh
-shasum -a 256 -c Keynest-1.0.0-arm64.dmg.sha256
-```
-
-## Em português
-
-O Keynest reúne sons de teclado, ambientes sonoros e sessões de foco em um app nativo para macOS.
-
-### Instalação
+## Instalar e usar
 
 1. Baixe o DMG em [Releases](https://github.com/luiizHenCode/keynest/releases/latest).
 2. Abra o arquivo e arraste **Keynest** para **Aplicativos**.
-3. Abra o app pela pasta Aplicativos.
-4. Para ouvir os cliques em outros apps, autorize o Keynest em **Ajustes do Sistema → Privacidade e Segurança → Monitoramento de Entrada**. Se solicitado, encerre e reabra o app.
+3. Abra o Keynest e escolha o som e o volume desejados.
+4. Para ouvir cliques em outros apps, autorize **Keynest** em **Ajustes do Sistema → Privacidade e Segurança → Monitoramento de Entrada**. Se solicitado, encerre e reabra o app.
 
-As notificações do Pomodoro têm uma autorização separada. O ambiente sonoro e o campo de teste não precisam da permissão de monitoramento.
+O instalador oficial é assinado e notarizado pela Apple. As notificações do Pomodoro têm uma autorização separada; os ambientes e o campo de teste não precisam de Monitoramento de Entrada.
 
-### Como usar
+Em **Pomodoro → Ajustar sessão**, escolha os tempos e a quantidade de ciclos. Um ciclo inclui foco e intervalo, inclusive o último. Você pode pausar, retomar ou pular o intervalo.
 
-- **Teclado:** escolha um dos três modelos Cherry MX, ouça a prévia e ajuste o volume.
-- **Ambiente:** escolha entre Chuva, Oceano, Floresta ou Lo-fi. O volume e a ativação são independentes dos cliques.
-- **Pomodoro:** configure o tempo de foco, intervalo e quantidade de ciclos em **Ajustar sessão**. Cada ciclo inclui foco e intervalo, inclusive o último. É possível pausar, retomar e pular intervalos.
-- **Modo live:** acompanhe o tempo no painel flutuante ou na barra de menus. O painel pode ser arrastado pelo cabeçalho e fixado sobre outras janelas.
-- **Idioma:** escolha Sistema, Português ou English nos ajustes ou pelo menu da barra superior.
+Fechar a janela mantém o app funcionando na barra de menus. Para parar o áudio e sair, escolha **Encerrar Keynest** nesse menu.
 
-Fechar a janela mantém o app funcionando na barra de menus. Para parar o áudio e encerrar o processo, escolha **Encerrar Keynest** nesse menu.
+### Privacidade e observações
 
-## Privacy / Privacidade
+- Os áudios são reproduzidos localmente, sem streaming.
+- O monitoramento detecta toques sem extrair ou armazenar os caracteres digitados em outros apps. O campo de teste mantém apenas seu próprio texto temporariamente em memória, sem salvá-lo.
+- Campos de senha e apps com Secure Input podem bloquear os sons globais do teclado.
+- Dispositivos Bluetooth podem acrescentar latência.
+- As preferências do Pomodoro são salvas, mas uma sessão ativa não é retomada depois de encerrar o app.
+- O tempo em repouso do Mac conta para o Pomodoro; os avisos dependem do estado do sistema e das configurações de notificações e Foco.
 
-Audio is bundled with the app and plays locally, without streaming. The keyboard listener detects key presses without extracting or storing the characters typed in other apps. The test field holds only its own text temporarily in memory and does not save it.
+## Baixar o código e modificar
 
-Os áudios estão incluídos no app e são reproduzidos localmente, sem streaming. O monitoramento detecta toques sem extrair ou armazenar os caracteres digitados em outros apps. O campo de teste mantém apenas seu próprio texto temporariamente em memória, sem salvá-lo.
+Requer macOS, Xcode com as ferramentas de linha de comando e Swift 6 ou superior.
 
-## Limitations / Limitações
-
-- This release supports Apple Silicon only; an Intel build is not currently available.
-- Password fields and apps using Secure Input may block global keyboard sounds.
-- Bluetooth audio devices may introduce latency.
-- Pomodoro preferences are saved, but active sessions are not restored after quitting the app.
-- Sleep time counts toward the Pomodoro. Alerts cannot be guaranteed while the Mac is asleep.
-- Notification delivery follows macOS notification and Focus settings.
-
-## Build from source
-
-Requires Xcode command-line tools and Swift 6 or later.
+Faça um fork para manter sua própria versão ou clone o repositório:
 
 ```sh
+git clone https://github.com/luiizHenCode/keynest.git
+cd keynest
 swift test
 sh scripts/build-app.sh
 open build/Keynest.app
 ```
 
-Local builds use ad-hoc signing. The bundled app is recommended over `swift run MacTap` when testing macOS permissions. The Swift package and internal executable are named `MacTap`.
+Abra `Package.swift` no Xcode para editar o projeto. Depois de modificar o código, execute novamente os testes e o script de build. Builds locais usam assinatura ad-hoc e podem exigir que a permissão de Monitoramento de Entrada seja concedida novamente.
 
-To create a local installer:
+### Onde modificar
+
+| Área | Arquivos |
+| --- | --- |
+| Janela de ajustes e controles | `Sources/MacTap/ContentView.swift`, `SettingsComponents.swift` |
+| Sons do teclado | `Sources/MacTap/ClickSound.swift`, `KeyboardAudio.swift`, `KeyboardMonitor.swift` |
+| Ambientes sonoros | `Sources/MacTap/AmbientSound.swift`, `AmbientAudio.swift` |
+| Pomodoro | `Sources/MacTap/PomodoroSession.swift`, `PomodoroModel.swift`, `PomodoroView.swift` |
+| Painel live e barra de menus | `Sources/MacTap/PomodoroLivePanel.swift`, `StatusBarController.swift` |
+| Traduções | `Sources/MacTap/Resources/Localization/` |
+| Testes | `Tests/MacTapTests/` |
+
+Os arquivos Swift indicados na tabela ficam em `Sources/MacTap/`. O pacote e o executável internos usam o nome `MacTap`.
+
+Para gerar um DMG local:
 
 ```sh
 sh scripts/build-dmg.sh
 ```
 
-## License and audio credits
+## English
 
-The original Keynest code is available under the [MIT License](LICENSE).
-Third-party audio retains its own license and attribution requirements:
+Keynest combines keyboard sounds, offline ambience and a Pomodoro timer in a native macOS app. Requires **macOS 14+ and Apple Silicon**.
 
-- [Keyboard recordings](THIRD_PARTY_NOTICES.md) — MIT.
-- [Rain](AMBIENCE_NOTICES.md) — CC BY 4.0.
-- [Ocean and forest](NATURE_NOTICES.md) — CC BY 4.0 and CC0.
-- [Lo-fi music](LOFI_NOTICES.md) — CC0.
+[Download the latest release](https://github.com/luiizHenCode/keynest/releases/latest), open the DMG and drag Keynest to Applications. For keyboard sounds in other apps, allow Keynest in **System Settings → Privacy & Security → Input Monitoring**. Pomodoro notifications require a separate permission.
 
-Audio credits and license links are also included in the app.
+Choose **English** in the app's language settings or menu bar. Closing the settings window keeps the app running; use **Quit Keynest** to exit.
+
+To modify Keynest, fork or clone this repository, open `Package.swift` in Xcode, run `swift test`, then `sh scripts/build-app.sh`. Local builds use ad-hoc signing. Original code is MIT licensed; bundled audio retains the licenses below.
+
+## Licença e créditos
+
+O código original do Keynest está disponível sob a [licença MIT](LICENSE), permitindo uso, modificação e redistribuição conforme suas condições.
+
+Os áudios de terceiros mantêm suas próprias licenças e atribuições:
+
+- [Gravações de teclado](THIRD_PARTY_NOTICES.md) — MIT.
+- [Chuva](AMBIENCE_NOTICES.md) — CC BY 4.0.
+- [Oceano e floresta](NATURE_NOTICES.md) — CC BY 4.0 e CC0.
+- [Lo-fi](LOFI_NOTICES.md) — CC0.
+
+Ao reutilizar os áudios, preserve os créditos e siga a licença de cada gravação.
